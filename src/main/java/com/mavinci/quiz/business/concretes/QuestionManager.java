@@ -14,6 +14,7 @@ import java.util.List;
 
 @Service
 @RequiredArgsConstructor
+
 public class QuestionManager implements IQuestionService {
 
     private final IQuestionDao questionDao;
@@ -46,6 +47,16 @@ public class QuestionManager implements IQuestionService {
 
     @Override
     public DataResult<List<Question>> getByLevelAndCategory(String level, String category) {
+
         return new SuccessDataResult<List<Question>> (this.questionDao.getByLevelAndCategory(level, category),"Questions viewed");
     }
+
+//    @Override
+//    public DataResult<List<Question>> getByLevelAndCategory(String level, String category) {
+//        List<Question> levelAndCategoryEntity = questionDao.getByLevelAndCategory(level, category);
+//        //dtoya cevir
+//
+//        return new SuccessDataResult<List<Question>> (,"Questions viewed");
+//    }
+
 }

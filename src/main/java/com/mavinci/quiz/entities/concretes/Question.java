@@ -40,6 +40,10 @@ public class Question implements Serializable {
     @Column(name = "option_d")
     private String optionD;
 
+    @Column(name = "option_e")
+    private String optionE;
+
+
     @Column(name = "answer")
     private String answer;
 
