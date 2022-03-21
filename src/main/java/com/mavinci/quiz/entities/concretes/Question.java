@@ -47,5 +47,7 @@ public class Question implements Serializable {
     @Column(name = "answer")
     private String answer;
 
+
+
 }
 
