@@ -3,6 +3,7 @@ package com.mavinci.quiz.business.abstracts;
 import com.mavinci.quiz.core.utilities.results.DataResult;
 import com.mavinci.quiz.core.utilities.results.Result;
 import com.mavinci.quiz.entities.concretes.Question;
+import com.mavinci.quiz.entities.dtos.QuestionDTO;
 
 import java.util.List;
 
@@ -14,6 +15,7 @@ public interface IQuestionService {
     DataResult <Question> getById(long id);
     DataResult<List<Question>> getByLevel(String level);
     DataResult<List<Question>> getByCategory(String category);
-    DataResult<List<Question>> getByLevelAndCategory(String level,String Category);
+    DataResult<List<Question>> getByLevelAndCategory(String level,String category);
+    DataResult<List<QuestionDTO>> getQuestion(String level, String category);
 
 }
