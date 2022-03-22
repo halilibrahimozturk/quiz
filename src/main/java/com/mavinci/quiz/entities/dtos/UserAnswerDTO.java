@@ -9,10 +9,12 @@ import javax.persistence.Id;
 @Data
 public class UserAnswerDTO {
 
+
     private long id;
+
     private String userAnswer;
 
-    private String questionId;
+    private long questionId;
 
-    private String userId;
+    private long userId;
 }

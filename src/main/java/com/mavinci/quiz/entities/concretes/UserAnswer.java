@@ -22,10 +22,10 @@ public class UserAnswer implements Serializable  {
     private String userAnswer;
 
     @Column(name="question_id")
-    private String questionId;
+    private long questionId;
 
     @Column(name="user_id")
-    private String userId;
+    private long userId;
 
 
 }
