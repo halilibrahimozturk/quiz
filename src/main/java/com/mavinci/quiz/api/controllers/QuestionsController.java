@@ -13,6 +13,7 @@ import java.lang.*;
 
 @RestController
 @RequestMapping("/api/questions")
+@CrossOrigin
 public class QuestionsController {
 
     private final IQuestionService questionService;
@@ -33,39 +34,43 @@ public class QuestionsController {
         return this.questionService.add(question);
 
     }
+//
+//    @GetMapping("/getById")
+//    public DataResult<Question> getById(@RequestParam  long id){
+//
+//        return this.questionService.getById(id);
+//    }
+//
+//    @GetMapping("/getByLevel")
+//    public DataResult<List<Question>> getByLevel(@RequestParam  String level){
+//
+//        return this.questionService.getByLevel(level);
+//    }
+//
+//    @GetMapping("/getByCategory")
+//    public DataResult<List<Question>> getByCategory(@RequestParam  String category){
+//
+//        return this.questionService.getByCategory(category);
+//    }
 
-    @GetMapping("/getById")
-    public DataResult<Question> getById(@RequestParam  long id){
+//    @GetMapping("/getByLevelAndCategory")
+//    public DataResult<List<Question>> getByLevelAndCategory(@RequestParam  String level , String category){
+//
+//        return this.questionService.getByLevelAndCategory(level, category);
+//    }
 
-        return this.questionService.getById(id);
-    }
+//    @GetMapping("/getQuestions")
+//    public DataResult<List<QuestionDTO>> getQuestions(@RequestParam  String level , String category){
+//
+//        return this.questionService.getQuestions(level, category);
+//    }
 
-    @GetMapping("/getByLevel")
-    public DataResult<List<Question>> getByLevel(@RequestParam  String level){
-
-        return this.questionService.getByLevel(level);
-    }
-
-    @GetMapping("/getByCategory")
-    public DataResult<List<Question>> getByCategory(@RequestParam  String category){
-
-        return this.questionService.getByCategory(category);
-    }
-
-    @GetMapping("/getByLevelAndCategory")
-    public DataResult<List<Question>> getByLevelAndCategory(@RequestParam  String level , String category){
-
-        return this.questionService.getByLevelAndCategory(level, category);
-    }
 
     @GetMapping("/getQuestion")
-    public DataResult<List<QuestionDTO>> getQuestion(@RequestParam  String level , String category){
+    public DataResult<QuestionDTO> getQuestion(@RequestParam  String level , String category){
 
         return this.questionService.getQuestion(level, category);
     }
-
-
-
 
 
 

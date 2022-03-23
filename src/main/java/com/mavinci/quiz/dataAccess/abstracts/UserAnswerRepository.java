@@ -9,7 +9,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface UserAnswerRepository extends JpaRepository<UserAnswer,Integer>   {
+public interface UserAnswerRepository extends JpaRepository<UserAnswer,Long>   {
 
 
     List<UserAnswer> getByUserId(long id);

@@ -39,10 +39,12 @@ public class UserAnswersController {
 
 
     @GetMapping("/getByUserId")
-    public DataResult<List<UserAnswer>> getByUserId(@RequestParam long id) {
+    public List<UserAnswerDTO> getByUserId(@RequestParam long id) {
 
         return this.userAnswerService.getByUserId(id);
     }
+
+
 
 
 }

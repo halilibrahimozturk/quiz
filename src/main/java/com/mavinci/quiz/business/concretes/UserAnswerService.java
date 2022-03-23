@@ -41,7 +41,7 @@ public class UserAnswerService implements IUserAnswerService {
 
 
     @Override
-    public DataResult<List<UserAnswer>> getByUserId(long id) {
-        return new SuccessDataResult<List<UserAnswer>>(this.userAnswerRepository.getByUserId(id), "User answers viewed");
+    public List<UserAnswerDTO> getByUserId(long id) {
+        return userAnswerMapper.toDto(this.userAnswerRepository.getByUserId(id));
     }
 }

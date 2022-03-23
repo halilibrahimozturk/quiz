@@ -12,7 +12,7 @@ public interface IUserAnswerService {
     DataResult<List<UserAnswer>> getAll();
     Result add(UserAnswerDTO userAnswerDTO);
 
-    DataResult <List<UserAnswer>> getByUserId(long id);
+    List<UserAnswerDTO> getByUserId(long id);
 
 
 }
